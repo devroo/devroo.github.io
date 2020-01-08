@@ -4,17 +4,17 @@
 # ---------------------------------------------------------------
 
 # Site
-title: NexT
-subtitle:
-description:
-author: John Doe
+title: Tech Origin
+subtitle: 모든 것을 기술적인 시각으로 바라보다
+description: IT에 전반적인 기획, 디자인, 개발 등의 지식을 나누고 토론하는 사이트
+author: Minwoo Choi
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
-language: en
+language: ko
 date_format: '%Y-%m-%d'
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com' and baseurl as '/child'
-url: 'https://devroo.github.io'
+url: https://devroo.github.io
 baseurl:
 permalink: pretty
 
@@ -89,7 +89,7 @@ plugins:
 favicon: /assets/favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: 'Jekyll, NexT'
+keywords: 'javascript, react, jekyll, vue, react-native, design, it, developer, developement, electron, macosx, windows, '
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -97,7 +97,7 @@ keywords: 'Jekyll, NexT'
 rss:
 
 # Specify the date when the site was setup
-#since: 2015
+since: 2020
 
 # icon between year and author @Footer
 authoricon: heart
@@ -115,11 +115,11 @@ copyright: true
 canonical: true
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
-seo: false
+seo: true
 
 # If true, will add site-subtitle to index page, added in jekyll config.
 # subtitle: Subtitle
-index_with_subtitle: false
+index_with_subtitle: true
 
 # ---------------------------------------------------------------
 # Menu Settings
@@ -128,12 +128,12 @@ index_with_subtitle: false
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories/
-  #about: /about/
+  categories: /categories/
+  about: /about/
   archives: /archives/
   tags: /tags/
-  #sitemap: /sitemap.xml
-  #commonweal: /404.html
+  # sitemap: /sitemap.xml
+  # commonweal: /404.html
 
 # Enable/Disable menu icons.
 # Icon Mapping:
@@ -227,8 +227,10 @@ social_icons:
   # Icon Mappings.
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
+  Facebook: facebook
   Twitter: twitter
-  Weibo: weibo
+  Instagram: instagram
+  # Weibo: weibo
 
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
@@ -344,7 +346,7 @@ custom_logo:
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
+highlight_theme: night
 
 # ---------------------------------------------------------------
 # Third Party Services Settings
@@ -595,7 +597,7 @@ use_motion: true
 fancybox: true
 
 # Progress bar in the top during page loading.
-pace: false
+pace: true
 # Themes list:
 #pace-theme-big-counter
 #pace-theme-bounce

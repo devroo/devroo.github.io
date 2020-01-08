@@ -1,8 +1,9 @@
 ---
 title: Highlight Test
 categories:
- - Test
+  - Test
 tags:
+published: false
 ---
 
 This is a highlight test.
@@ -18,7 +19,7 @@ alert('Hello World!');
 # Highlight block
 
 ```javascript
-alert( 'Hello, world!' );
+alert('Hello, world!');
 ```
 
 ```python
@@ -33,13 +34,13 @@ end
 
 {% highlight ruby %}
 def foo
-  puts 'foo'
+puts 'foo'
 end
 {% endhighlight %}
 
 {% highlight ruby linenos %}
 def foo
-  puts 'foo'
+puts 'foo'
 end
 {% endhighlight %}
 

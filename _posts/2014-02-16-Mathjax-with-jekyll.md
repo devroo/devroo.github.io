@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "MathJax with Jekyll"
+title: 'MathJax with Jekyll'
 date: 2014-02-16
 categories: opinion
 tags: [resources, jekyll]
 image: http://gastonsanchez.com/images/blog/mathjax_logo.png
+published: false
 ---
 
 One of the rewards of switching my website to [Jekyll](http://jekyllrb.com/) is the
@@ -19,9 +20,8 @@ this one \\( x^2 + y^2 = r^2 \\).
 ### What's MathJax?
 
 If you check MathJax website [(www.mathjax.org)](http://www.mathjax.org/) you'll see
-that it *is an open source JavaScript display engine for mathematics that works in all
-browsers*.
-
+that it _is an open source JavaScript display engine for mathematics that works in all
+browsers_.
 
 ### How to implement MathJax with Jekyll
 
@@ -29,26 +29,29 @@ I followed the instructions described by Dason Kurkiewicz for
 [using Jekyll and Mathjax](http://dasonk.github.io/blog/2012/10/09/Using-Jekyll-and-Mathjax/).
 
 Here are some important details. I had to modify the Ruby library for Markdown in
-my ```_config.yml``` file. Now I'm using redcarpet so the corresponding line in the
-configuration file is: ```markdown: redcarpet```
+my `_config.yml` file. Now I'm using redcarpet so the corresponding line in the
+configuration file is: `markdown: redcarpet`
 
-To load the MathJax javascript, I added the following lines in my layout ```post.html```
-(located in my folder ```_layouts```)
+To load the MathJax javascript, I added the following lines in my layout `post.html`
+(located in my folder `_layouts`)
 
 {% highlight r %}
+
 <script type="text/javascript"
     src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
+
 {% endhighlight %}
 
-Of course you can choose a different file location in your jekyll layouts. 
+Of course you can choose a different file location in your jekyll layouts.
 
 Note that by default, the **tex2jax** preprocessor defines the
-LaTeX math delimiters, which are ```\\(...\\)``` for in-line math, and ```\\[...\\]``` for
-displayed equations. It also defines the TeX delimiters ```$$...$$``` for displayed
-equations, but it does not define ```$...$``` as in-line math delimiters. To enable in-line math delimiter with ```$...$```, please use the following configuration:
+LaTeX math delimiters, which are `\\(...\\)` for in-line math, and `\\[...\\]` for
+displayed equations. It also defines the TeX delimiters `$$...$$` for displayed
+equations, but it does not define `$...$` as in-line math delimiters. To enable in-line math delimiter with `$...$`, please use the following configuration:
 
 {% highlight r %}
+
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
   tex2jax: {
@@ -58,8 +61,8 @@ MathJax.Hub.Config({
 });
 </script>
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-{% endhighlight %}
 
+{% endhighlight %}
 
 ### A Couple of Examples
 
@@ -77,11 +80,10 @@ How do you write such expression? Very simple: using **double dollar** signs
 $$a^2 + b^2 = c^2$$
 {% endhighlight %}
 
-To display inline math use ```\\( ... \\)``` like this ```\\( sin(x^2) \\)``` which gets
+To display inline math use `\\( ... \\)` like this `\\( sin(x^2) \\)` which gets
 rendered as \\( sin(x^2) \\)
 
-
-Here's another example using type ```\mathsf```
+Here's another example using type `\mathsf`
 
 {% highlight r %}
 $$ \mathsf{Data = PCs} \times \mathsf{Loadings} $$
@@ -102,7 +104,7 @@ is displayed as
 \\[ \mathbf{X} = \mathbf{Z} \mathbf{P^\mathsf{T}} \\]
 
 If you want to use subscripts like this \\( \mathbf{X}\_{n,p} \\) you need to scape the
-underscores with a backslash like so ``` \mathbf{X}\_{n,p} ```:
+underscores with a backslash like so `\mathbf{X}\_{n,p}`:
 
 {% highlight r %}
 $$ \mathbf{X}\_{n,p} = \mathbf{A}\_{n,k} \mathbf{B}\_{k,p} $$
